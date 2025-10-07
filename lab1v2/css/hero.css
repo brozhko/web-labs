@@ -1,0 +1,65 @@
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    padding: 100px 0 120px 0;
+}
+
+
+
+.hero-content {
+    flex: 1;
+    max-width: 487px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #000000;
+    margin-bottom: 32px;
+    width: 340px;
+}
+
+
+
+    .hero-description {
+        font-family: 'Inter', sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: #7D7987;
+        line-height: 30px;
+        margin-bottom: 48px;
+    }
+
+    .download-btn {
+        font-family: 'Inter', sans-serif;
+        background-color: #fb8f1d;
+        color: white;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 599px;
+        height: auto;
+    }
+
+
+    .hero-title {
+        font-size: 36px; /* вже є, можна залишити */
+        line-height: 1.2; /* краще для компактного відображення */
+        word-wrap: break-word; /* текст не виходить за межі */
+    }
+

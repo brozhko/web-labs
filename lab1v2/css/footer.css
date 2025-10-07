@@ -1,0 +1,32 @@
+footer {
+    background: #F8F8F8;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    height: 150px;
+}
+
+
+
+.blocks-container img {
+    position: relative;
+}
+
+.blocks-container p {
+    font-size: 17px;
+    font-family: "Mulish", serif;
+    text-align: right;
+    font-weight: 300;
+    color: #848484;
+}
+
+hr {
+    position: relative;
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
