@@ -1,0 +1,27 @@
+/* Import all component styles */
+@import url("globals.css");
+@import url("components/header.css");
+@import url("components/hero.css");
+@import url("components/testimonials.css");
+@import url("components/trending.css");
+@import url("components/footer.css");
+@import url("components/responsive.css");
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    background-color: #fff;
+}

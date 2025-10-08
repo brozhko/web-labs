@@ -1,0 +1,222 @@
+/* Responsive Design */
+@media (max-width: 1400px) {
+
+    .header,
+    .testimonials-section,
+    .trending-section,
+    .footer {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .header,
+    .testimonials-section,
+    .trending-section,
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        gap: 80px;
+    }
+
+    .testimonial-content {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header,
+    .testimonials-section,
+    .trending-section,
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar {
+        padding: 24px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        padding-top: 80px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .mobile-auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .desktop-auth {
+        display: none;
+    }
+
+    /* Стилі для анімації гамбургер меню */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hamburger span {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 80px 40px 40px;
+        gap: 32px;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .desktop-auth {
+        display: none;
+    }
+
+    .mobile-auth-buttons {
+        display: flex;
+        width: 100%;
+    }
+
+    .mobile-auth-buttons .login-btn,
+    .mobile-auth-buttons .register-btn {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 48px;
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 48px;
+    }
+
+    .testimonials-section,
+    .trending-section {
+        padding: 80px 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .testimonial-text blockquote {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

@@ -1,0 +1,26 @@
+/* Footer */
+.footer {
+    background-color: #f7f7f7;
+    padding: 48px 120px;
+    border-top: 1px solid #c4c4c4;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-media img {
+    width: 248px;
+    height: 23px;
+}
