@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Моя бібліотека - Книги</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <input type="text" id="searchInput" placeholder="Пошук книг...">
+        <button onclick="searchBooks()">Пошук</button>
+        <button onclick="clearSearchBooks()">Очистити</button>
+    </div>
+
+    <div class="sidebar">
+        <label>
+            <input type="checkbox" id="sortToggle" onchange="renderBooks()"> Сортувати за ціною (спад)
+        </label>
+        <div>
+            <button onclick="countTotalPrice()">Порахувати</button>
+            <p>Загальна сума: ₴<span id="totalExpenses">0</span></p>
+        </div>
+    </div>
+
+    <div class="container" id="booksContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
