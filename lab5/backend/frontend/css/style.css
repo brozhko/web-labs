@@ -1,0 +1,291 @@
+/* ==============================
+   🌐 БАЗА
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #f2f5f9;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* ==============================
+   🔵 ВЕРХНЯ ПАНЕЛЬ
+============================== */
+.topbar {
+  background-color: #007bff;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ==============================
+   🔍 ПОШУК ТА КНОПКИ
+============================== */
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchbox input {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 220px;
+  font-size: 14px;
+  color: #333;
+}
+
+.searchbox button {
+  border: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 14px;
+}
+
+#btnSearch { background-color: #2196f3; }
+#btnSort { background-color: #28a745; }
+#btnTotal { background-color: #f39c12; }
+#btnAdd { background-color: #17a2b8; }
+
+.searchbox button:hover {
+  transform: none;
+  opacity: 1;
+}
+
+/* ==============================
+   📚 ГОЛОВНА СТОРІНКА — КНИГИ
+============================== */
+.section {
+  padding: 40px 60px;
+}
+
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch; /* ensure grid items stretch to equal row height */
+}
+
+.card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  display: flex;             /* uniform internal layout */
+  flex-direction: column;    /* stack card content */
+  align-items: center;       /* center media/content */
+  height: 360px;             /* consistent card height across rows */
+}
+
+.card:hover {
+  transform: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.author {
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* push the action button to the bottom for consistent spacing */
+.card button,
+.card .edit-btn {
+  margin-top: auto;
+}
+
+.card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #007bff;
+}
+
+/* ==============================
+   💰 ПІДСУМОК
+============================== */
+h3 {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ==============================
+   📘 СТОРІНКИ CREATE / EDIT
+============================== */
+.form-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  background-color: #f2f5f9;
+}
+
+.form-container {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 520px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* КНОПКИ У ФОРМАХ */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+form button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-save {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #007bff;
+}
+
+.btn-cancel {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+/* Make cancel anchor look like a full-width button next to Save */
+.btn-cancel {
+  text-decoration: none;
+  display: inline-block;
+}
+.form-actions .btn-cancel {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ==============================
+   🔙 КНОПКА НАЗАД
+============================== */
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background-color: #6c757d;
+}
+
+/* Disable all animations and transitions globally */
+*, *::before, *::after {
+  transition: none !important;
+  animation: none !important;
+}
+.edit-btn, .delete-btn {
+  display: inline-block;
+  margin-top: 10px;
+}
