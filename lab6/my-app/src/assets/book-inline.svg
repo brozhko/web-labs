@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-label="Stack of books illustration">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe7c3"/>
+      <stop offset="100%" stop-color="#ffd49b"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="180" rx="16" fill="#f4f4f4"/>
+  <rect x="30" y="40" width="150" height="30" rx="8" fill="#ffce8d" stroke="#cc9240" stroke-width="4"/>
+  <rect x="40" y="80" width="170" height="32" rx="9" fill="url(#a)" stroke="#c6802a" stroke-width="4"/>
+  <rect x="55" y="122" width="140" height="28" rx="8" fill="#ffdcb0" stroke="#c27821" stroke-width="4"/>
+  <path d="M40 96 h60" stroke="#c27821" stroke-width="6" stroke-linecap="round"/>
+  <path d="M70 54 h60" stroke="#cc9240" stroke-width="6" stroke-linecap="round"/>
+  <path d="M65 136 h70" stroke="#b66d1f" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="195" cy="58" r="10" fill="#ffffff" stroke="#cc9240" stroke-width="4"/>
+  <circle cx="200" cy="137" r="9" fill="#ffffff" stroke="#b66d1f" stroke-width="4"/>
+</svg>

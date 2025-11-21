@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Book placeholder">
+  <rect width="400" height="300" rx="18" fill="#d9d9d9" />
+  <rect x="60" y="60" width="120" height="180" rx="12" fill="#ffffff" stroke="#c4c4c4" stroke-width="5"/>
+  <rect x="200" y="70" width="120" height="170" rx="12" fill="#f3f3f3" stroke="#bbbbbb" stroke-width="5"/>
+  <path d="M80 110 H160" stroke="#bbbbbb" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 120 H300" stroke="#9d9d9d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M80 140 H160" stroke="#bbbbbb" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 150 H300" stroke="#9d9d9d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M80 170 H160" stroke="#bbbbbb" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 180 H300" stroke="#9d9d9d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="310" cy="220" r="22" fill="#ffffff" stroke="#a7a7a7" stroke-width="6"/>
+  <path d="M120 240 h160" stroke="#b5b5b5" stroke-width="10" stroke-linecap="round"/>
+</svg>

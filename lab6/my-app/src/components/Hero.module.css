@@ -1,0 +1,47 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 70px 40px 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.leftBox {
+  width: 380px;
+  height: 320px;
+  border: 2px solid #4a4a4a;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f4f4f4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.textBlock {
+  max-width: 460px;
+  color: #444444;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #3e3e3e;
+}
+
+.text {
+  margin-top: 16px;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textBlock {
+    max-width: 520px;
+  }
+}
