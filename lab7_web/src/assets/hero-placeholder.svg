@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Books collage illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f2ed"/>
+      <stop offset="100%" stop-color="#e9e1d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#f7f7f7" />
+  <rect x="60" y="80" width="680" height="440" rx="30" fill="url(#bg)" stroke="#c5b8a0" stroke-width="6"/>
+  <rect x="120" y="120" width="200" height="320" rx="18" fill="#fff2d8" stroke="#d7a45c" stroke-width="6"/>
+  <rect x="360" y="150" width="220" height="300" rx="20" fill="#ffe5c2" stroke="#d78f35" stroke-width="6"/>
+  <rect x="600" y="180" width="140" height="250" rx="16" fill="#faf0d9" stroke="#cba164" stroke-width="5"/>
+  <path d="M140 320 L300 180" stroke="#d78f35" stroke-width="12" stroke-linecap="round"/>
+  <path d="M380 380 L540 220" stroke="#bb6b20" stroke-width="14" stroke-linecap="round"/>
+  <path d="M400 260 h120 v60 h-120z" fill="#ffffff" stroke="#ad5c1d" stroke-width="6"/>
+  <circle cx="220" cy="190" r="30" fill="#d78f35"/>
+  <circle cx="470" cy="190" r="34" fill="#c1641a"/>
+  <path d="M620 230 q40 -40 80 0" fill="none" stroke="#d1a362" stroke-width="12" stroke-linecap="round"/>
+  <path d="M640 320 l70 -70" stroke="#d1a362" stroke-width="12" stroke-linecap="round"/>
+</svg>

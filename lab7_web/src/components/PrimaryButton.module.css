@@ -1,0 +1,23 @@
+.primaryButton {
+  padding: 11px 16px;
+  border-radius: 10px;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.primaryButton:hover {
+  background: #1d2540;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+}
+
+.primaryButton:active {
+  transform: translateY(1px);
+}
