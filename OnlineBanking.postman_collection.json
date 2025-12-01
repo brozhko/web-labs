@@ -1,0 +1,382 @@
+{
+  "info": {
+    "name": "OnlineBanking API",
+    "_postman_id": "b2c9f8b0-0000-0000-0000-online-banking",
+    "description": "CRUD для clients, accounts, payments, transactions + ref-таблиці.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "BASE - health check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Clients - GET all",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/clients/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "clients", ""]
+        }
+      }
+    },
+    {
+      "name": "Clients - GET by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/clients/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "clients", "1"]
+        }
+      }
+    },
+    {
+      "name": "Clients - POST (create)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"full_name\": \"Тестовий Клієнт\",\n  \"phone\": \"+380500000001\",\n  \"email\": \"test@test.com\",\n  \"passport\": \"TT123456\",\n  \"address\": \"Київ\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/clients/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "clients", ""]
+        }
+      }
+    },
+    {
+      "name": "Clients - PUT (update)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"address\": \"Київ, вул. Нова 1\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/clients/16",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "clients", "16"]
+        }
+      }
+    },
+    {
+      "name": "Clients - DELETE",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/clients/16",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "clients", "16"]
+        }
+      }
+    },
+
+    {
+      "name": "Accounts - GET all",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/accounts/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "accounts", ""]
+        }
+      }
+    },
+    {
+      "name": "Accounts - GET by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/accounts/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "accounts", "1"]
+        }
+      }
+    },
+    {
+      "name": "Accounts - POST (create)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"client_id\": 1,\n  \"bank_id\": 1,\n  \"currency_id\": 1,\n  \"account_number\": \"UATEST00099\",\n  \"balance\": 500.00\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/accounts/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "accounts", ""]
+        }
+      }
+    },
+    {
+      "name": "Accounts - PUT (update)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"balance\": 1500.00\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/accounts/16",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "accounts", "16"]
+        }
+      }
+    },
+    {
+      "name": "Accounts - DELETE",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/accounts/16",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "accounts", "16"]
+        }
+      }
+    },
+
+    {
+      "name": "Payments - GET all",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/payments/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "payments", ""]
+        }
+      }
+    },
+    {
+      "name": "Payments - GET by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/payments/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "payments", "1"]
+        }
+      }
+    },
+    {
+      "name": "Payments - POST (create)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type_id\": 1,\n  \"recipient_id\": 1,\n  \"amount\": 100.00,\n  \"description\": \"Тестовий платіж\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/payments/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "payments", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Transactions - GET all",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/transactions/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "transactions", ""]
+        }
+      }
+    },
+    {
+      "name": "Transactions - GET by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/transactions/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "transactions", "1"]
+        }
+      }
+    },
+    {
+      "name": "Transactions - POST (create with business logic)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"from_account\": 1,\n  \"to_account\": 2,\n  \"payment_id\": 1,\n  \"amount\": 100.00\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/transactions/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "transactions", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Ref - Banks",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/banks",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "banks"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Currencies",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/currencies",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "currencies"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Payment Types",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/payment-types",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "payment-types"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Recipients",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/recipients",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "recipients"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Cards",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/cards",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "cards"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Cards by Account",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/cards/by-account/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "cards", "by-account", "1"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Login history",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/login-history",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "login-history"]
+        }
+      }
+    },
+    {
+      "name": "Ref - Login history by client",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/ref/login-history/by-client/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["api", "ref", "login-history", "by-client", "1"]
+        }
+      }
+    }
+  ]
+}
